@@ -6,7 +6,7 @@ function App() {
   const [height, setHeight] = useState(0);
   const [bmiRes, setBmiRes] = useState("");
   const [message, setMessage] = useState("");
-  //const [gender, setGender] = useState();
+  const [gender, setGender] = useState();
 
   const inputWeight = (e) => {
     setWeight(e.target.value);
@@ -37,10 +37,7 @@ function App() {
   };
 
   const clearResult = () => {
-    setWeight(0);
-    setHeight(0);
-    setBmiRes("");
-    setMessage("");
+    window.location.reload();
   };
   return (
     <div className="calc__app">
@@ -82,7 +79,7 @@ function App() {
             </div>
           </div>
 
-          {/*<div className="gender">
+          <div className="gender">
             <input
               type="radio"
               id="male"
@@ -101,7 +98,7 @@ function App() {
             />
             <label for="female">Female</label>
             <br />
-          </div>*/}
+          </div>
 
           <div className="btns">
             <button className="submit__ans" onClick={handleBMIRes}>
@@ -117,6 +114,7 @@ function App() {
         <div className="result__sect">
           <div className="bmi__result">
             <h2>{bmiRes}BMI</h2>
+            <span><p>{gender}</p></span>
           </div>
           <div className="message">
             <span>
