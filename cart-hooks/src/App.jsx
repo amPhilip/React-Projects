@@ -47,6 +47,7 @@ function App() {
         products={products}
         addProduct={addProduct}
         removeProduct={removeProduct}
+        countCartProd={addtoCart.length}
       />
       <Basket
         addtoCart={addtoCart}
