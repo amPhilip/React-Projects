@@ -1,6 +1,9 @@
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-const Header = () => {
+
+
+
+const Header = ({countCartProd}) => {
   return (
     <div className="header">
       <div className="logo">
@@ -10,7 +13,9 @@ const Header = () => {
         <h1>
           <AiOutlineShoppingCart />
         </h1>
-        <h2>0</h2>
+        <span>{countCartProd ? (
+          <button className="cartAmount">{countCartProd}</button>
+        ): ('')}</span>
       </div>
     </div>
   );
