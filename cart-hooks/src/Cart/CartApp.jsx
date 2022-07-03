@@ -8,10 +8,11 @@ const CartApp = ({
   products,
   addProduct,
   removeProduct,
+  countCartProd
 }) => {
   return (
     <div className="container">
-      <Header />
+      <Header countCartProd={countCartProd}/>
       <ProductSection
         addtoCart={addtoCart}
         setAddToCart={setAddToCart}
